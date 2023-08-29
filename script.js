@@ -8,7 +8,7 @@ searchInput.addEventListener('input', function () {
         const printerName = printer.querySelector('.printer-name').textContent.toLowerCase();
         const printerToner = printer.querySelector('.printer-toner').textContent.toLowerCase();
         
-        if (printerName.startsWith(searchTerm) || printerToner.startsWith(searchTerm)) {
+        if (printerName.includes(searchTerm) || printerToner.includes(searchTerm)) {
             printer.style.display = 'block';
         } else {
             printer.style.display = 'none';
